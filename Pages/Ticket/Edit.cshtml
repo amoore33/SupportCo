@@ -1,0 +1,70 @@
+@page
+@model SupportCo.Pages_Ticket.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Ticket</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Ticket.ID" />
+            <div class="form-group">
+                <label asp-for="Ticket.LastName" class="control-label"></label>
+                <input asp-for="Ticket.LastName" class="form-control" />
+                <span asp-validation-for="Ticket.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ticket.FirstName" class="control-label"></label>
+                <input asp-for="Ticket.FirstName" class="form-control" />
+                <span asp-validation-for="Ticket.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ticket.SubmitDate" class="control-label"></label>
+                <input asp-for="Ticket.SubmitDate" class="form-control" />
+                <span asp-validation-for="Ticket.SubmitDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ticket.Email" class="control-label"></label>
+                <input asp-for="Ticket.Email" class="form-control" />
+                <span asp-validation-for="Ticket.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ticket.Phone" class="control-label"></label>
+                <input asp-for="Ticket.Phone" class="form-control" />
+                <span asp-validation-for="Ticket.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ticket.DeviceType" class="control-label"></label>
+                <input asp-for="Ticket.DeviceType" class="form-control" />
+                <span asp-validation-for="Ticket.DeviceType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ticket.Description" class="control-label"></label>
+                <input asp-for="Ticket.Description" class="form-control" />
+                <span asp-validation-for="Ticket.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ticket.Status" class="control-label"></label>
+                <input asp-for="Ticket.Status" class="form-control" />
+                <span asp-validation-for="Ticket.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

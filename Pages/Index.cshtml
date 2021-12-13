@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to SupportCo!</h1>
+    <p class="lead">How can we help?</p>
+    <div class="row">
+        <div class="col">
+            <h3>I&rsquo;m a customer</h3>
+            <a class="btn btn-primary" href="Ticket/Create">Submit a support ticket</a>
+        </div>
+        <div class="col">
+            <h3>I&rsquo;m an employee</h3>
+            <a class="btn btn-primary" href="Ticket">View tickets</a>
+        </div>
+    </div>
+</div>
